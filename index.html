@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>CIAPSQUAD :: Oficjalna strona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="strona">
+
+    <!-- LOGO -->
+    <header class="logo">
+      <a href="#" id="logo-link" title="Strona główna">
+        <img src="logo.png" alt="CIAPSKŁAD">
+      </a>
+    </header>
+
+    <!-- MENU BOCZNE 1 (na wysokości nawigacji) -->
+    <button class="btn menu-boczne m1" data-sekcja="forum"><span class="nr">1</span> FORUM</button>
+
+    <!-- NAWIGACJA GÓRNA -->
+    <nav class="nawigacja">
+      <button class="btn nav-btn" data-sekcja="aktualnosci">o aktualnościach</button>
+      <button class="btn nav-btn" data-sekcja="ekipa">ekipa</button>
+      <button class="btn nav-btn" data-sekcja="memy">memy</button>
+      <button class="btn nav-btn" data-sekcja="vip">vip</button>
+      <button class="btn nav-btn" data-sekcja="klasa">nasza klasa</button>
+    </nav>
+
+    <!-- MENU BOCZNE 2 (na wysokości paska NEWS) -->
+    <button class="btn menu-boczne m2" data-sekcja="galeria"><span class="nr">2</span> galeria</button>
+
+    <!-- PASEK NEWS (nad głównym boxem) -->
+    <div class="pasek">
+      <span class="pasek-etykieta">NEWS</span>
+      <div class="pasek-okno">
+        <div class="pasek-tekst">
+          Witamy na oficjalnej stronie CIAPSQUAD &nbsp;•&nbsp; Ruszyło FORUM – wbijaj! &nbsp;•&nbsp; Dodaj nas do ulubionych [CTRL+D] &nbsp;•&nbsp; Strona najlepiej wygląda w Firefoxie w rozdzielczości 1024x768 &nbsp;•&nbsp; Nie znasz forum? Teraz już znasz.
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU BOCZNE 3-5 -->
+    <aside class="menu-lewe">
+      <button class="btn menu-boczne" data-sekcja="download"><span class="nr">3</span> download</button>
+      <button class="btn menu-boczne" data-sekcja="ksiega"><span class="nr">4</span> księga gości</button>
+      <button class="btn menu-boczne" data-sekcja="gry"><span class="nr">5</span> gry</button>
+    </aside>
+
+    <!-- GŁÓWNA TREŚĆ -->
+    <main class="tresc box">
+      <div class="box-naglowek" id="tresc-tytul">CIAPSQUAD</div>
+      <div class="box-tresc" id="tresc"></div>
+    </main>
+
+    <!-- OBRAZEK DNIA (tej samej wysokości co box obok) -->
+    <section class="obrazek-dnia box">
+      <div class="box-naglowek">Obrazek dnia</div>
+      <div class="box-tresc">
+        <div class="obrazek-ramka" id="obrazek-dnia" title="Kliknij"></div>
+        <p class="obrazek-podpis" id="obrazek-podpis"></p>
+      </div>
+    </section>
+
+    <!-- CEO: miejsce na obrazek -->
+    <section class="ceo box">
+      <div class="box-naglowek">CEO</div>
+      <div class="box-tresc ceo-srodek">
+        <div class="ceo-ramka">
+          <!-- Wstaw obrazek CEO jako plik ceo.jpg w folderze strony -->
+          <img src="ceo.jpg" alt="CEO" id="ceo-img">
+          <span class="ceo-zaslepka">tu obrazek CEO</span>
+        </div>
+        <p class="ceo-podpis">ciap sweeney<br><small>(CEO)</small></p>
+      </div>
+    </section>
+
+    <!-- NOWOŚĆ -->
+    <section class="nowosc box">
+      <div class="box-naglowek">Nowość <span class="badge-new">NEW!</span></div>
+      <div class="box-tresc">
+        <div class="nowosc-ramka" id="nowosc"></div>
+      </div>
+    </section>
+
+    <!-- ŚMIESZNE FILMIKI -->
+    <section class="filmiki box">
+      <div class="box-naglowek">Śmieszne filmiki</div>
+      <div class="box-tresc">
+        <div class="film-okno" id="film" data-yt="L-5dT4ftD-c">
+          <button class="film-start" id="film-start" aria-label="Odtwórz filmik">
+            <img src="https://img.youtube.com/vi/L-5dT4ftD-c/hqdefault.jpg" alt="" onerror="this.remove()">
+            <span class="film-play">&#9654;</span>
+          </button>
+        </div>
+        <a class="link film-link" href="https://youtu.be/L-5dT4ftD-c?si=HYXlUm-Ktd5-eiul" target="_blank" rel="noopener">otwórz na YouTube ↗</a>
+      </div>
+    </section>
+
+    <!-- CWELE SOCIALE (pod obrazkiem dnia) – dane z dane/sociale.json -->
+    <section class="sociale box">
+      <div class="box-naglowek">cwele sociale :</div>
+      <div class="box-tresc sociale-srodek">
+        <div class="soc-pasek">
+          <button class="soc-strzalka" id="soc-lewo" aria-label="Poprzednia osoba">&#10094;</button>
+          <span class="soc-osoba" id="osoba-nazwa">osoba</span>
+          <button class="soc-strzalka" id="soc-prawo" aria-label="Następna osoba">&#10095;</button>
+        </div>
+        <ul class="soc-lista" id="soc-lista"></ul>
+        <div class="soc-licznik" id="soc-licznik"></div>
+      </div>
+    </section>
+
+    <!-- STOPKA (od kolumny CEO) + mały chomik -->
+    <footer class="stopka">
+      <div class="stopka-lewo">
+        <span class="emotka" id="emotka">:D</span>
+        copyright <a class="link" href="https://www.polskizwiazekhydraulikow.pl" target="_blank" rel="noopener">pzh.pl</a>
+      </div>
+
+      <div class="chomik-wiersz">
+        <div class="chomik-ramka" id="chomik" title="Kliknij, żeby wylosować nowego chomika">
+          <img src="chomik.png" alt="Losowy chomik" id="chomik-img">
+        </div>
+        <svg class="strzalka" viewBox="0 0 80 30" aria-hidden="true">
+          <line x1="78" y1="15" x2="6" y2="15" />
+          <polyline points="18,4 4,15 18,26" />
+        </svg>
+        <p class="chomik-napis">LOSOWY CHOMIK GIF<br><span>MASZ TO ZROZUMIEĆ</span></p>
+      </div>
+
+      <div class="stopka-prawo">
+        <div class="userbar">CIAPSQUAD member</div>
+        <div class="licznik">Odwiedzin: <b id="licznik">000000</b></div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
