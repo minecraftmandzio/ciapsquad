@@ -32,8 +32,8 @@ jobs:
       - name: Odczytaj kanał Discorda i zaktualizuj sociale
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          DISCORD_KANAL: ${{ vars.DISCORD_KANAL }}
-          DISCORD_DOZWOLENI: ${{ vars.DISCORD_DOZWOLENI }}
+          DISCORD_KANAL: ${{ vars.DISCORD_KANAL || secrets.DISCORD_KANAL }}
+          DISCORD_DOZWOLENI: ${{ vars.DISCORD_DOZWOLENI || secrets.DISCORD_DOZWOLENI }}
         run: node .github/scripts/discord-sociale.mjs
 
       - name: Zapisz zmiany w repo
